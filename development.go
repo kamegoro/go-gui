@@ -1,3 +1,6 @@
+//go:build !release
+// +build !release
+
 package main
 
 import (
@@ -8,7 +11,7 @@ import (
 )
 
 func init() {
-	u, err := url.Parse("http://localhost:3000/")
+	u, err := url.Parse("http://192.130.0.10:3200")
 	if err != nil {
 		log.Fatal(err)
 	}
